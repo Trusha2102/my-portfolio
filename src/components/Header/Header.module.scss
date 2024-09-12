@@ -1,0 +1,45 @@
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@200..900&display=swap');
+
+.header {
+    background-color: #B1AFFF;
+    padding: 1rem 4rem; // Increased padding for more space on the edges
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    height: 80px; // Adjust height as needed
+    display: flex;
+    align-items: center; // Center content vertically
+    justify-content: center; // Center content horizontally
+    position: relative; // Ensure positioning context for alignment
+
+    nav {
+        display: flex;
+        gap: 2rem; // Adjust space between links as needed
+
+        a {
+            position: relative;
+            color: white;
+            text-decoration: none;
+            transition: color 0.3s ease;
+            font-family: 'Inconsolata', monospace;
+            font-weight: 400; // Use desired font weight, e.g., 400
+            font-size: 1.2rem; // Increase font size here
+
+            &::after {
+                content: '';
+                position: absolute;
+                width: 100%;
+                transform: scaleX(0);
+                height: 2px;
+                bottom: -5px; // Adjust if needed
+                left: 0;
+                background-color: white;
+                transform-origin: bottom right;
+                transition: transform 0.25s ease-out;
+            }
+
+            &:hover::after {
+                transform: scaleX(1);
+                transform-origin: bottom left;
+            }
+        }
+    }
+}

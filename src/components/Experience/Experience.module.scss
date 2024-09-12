@@ -1,0 +1,159 @@
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@200..900&display=swap');
+
+.experienceSection {
+  padding: 3rem 1.5rem;
+  background: linear-gradient(180deg, #D1E9F6 0%, #F6EACB 100%);
+  border-radius: 0; // Straight edges
+  position: relative;
+  font-family: 'Inconsolata', monospace; // Apply the font family globally
+
+  .experienceTitle {
+    text-align: center;
+    margin-bottom: 2rem;
+
+    h2 {
+      font-size: 3rem;
+      color: #6a1b9a; // Dark purple font color for visibility
+      font-family: 'Inconsolata', monospace; // Ensure the font is applied here
+      position: relative;
+      z-index: 1;
+      display: inline-block;
+
+      &:after {
+        content: '';
+        display: block;
+        width: 60px;
+        height: 4px;
+        background-color: #EECAD5;
+        margin: 0.5rem auto 0;
+        transform: scaleX(0);
+        transform-origin: center;
+        transition: transform 0.5s ease-in-out;
+      }
+
+      &.active:after {
+        transform: scaleX(1); // Scale up underline when active
+      }
+    }
+  }
+
+  // Butterfly animations
+  &:before, &:after {
+    content: "";
+    position: absolute;
+    width: 160px;
+    height: 160px;
+    background-size: cover;
+    opacity: 0.6;
+    animation: float 6s ease-in-out infinite;
+    transform: rotate(-15deg);
+    z-index: 0; // Set z-index for proper layering
+  }
+
+  &:before {
+    background-image: url('/butterfly1.png');
+    top: 10px;
+    left: 20px;
+  }
+
+  &:after {
+    background-image: url('/butterfly2.png'); // Use a different image for variety
+    bottom: 10px;
+    right: 10px;
+    animation-delay: 2s;
+  }
+
+  .butterfly {
+    position: absolute;
+    background-size: cover;
+    opacity: 0.8;
+    z-index: 1; // Ensure these butterflies are above other elements
+    animation: float 6s ease-in-out infinite;
+
+    &:nth-child(1) {
+      width: 120px;
+      height: 120px;
+      background-image: url('/butterfly3.png');
+      top: 20%;
+      left: 10%;
+      transform: rotate(-25deg);
+    }
+
+  }
+
+  .experienceContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    max-width: 900px;
+    margin: 0 auto;
+    position: relative; // Ensure container is positioned relative for butterflies to position correctly
+    z-index: 1; // Ensure container is above butterflies
+  }
+
+  .experienceCard {
+    background-color: #FFFFFF;
+    padding: 1.5rem;
+    border-radius: 12px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    position: relative;
+    z-index: 2;
+
+    &:hover {
+      transform: translateY(-5px) scale(1.02); // Lift and slight zoom
+      box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
+    }
+
+    .left {
+      text-align: left;
+
+      h3 {
+        font-size: 1.8rem;
+        color: #6a1b9a; // Dark purple for consistency
+        font-family: 'Inconsolata', monospace; // Apply font here as well
+        font-weight: 700; // Slightly less weight for subheading
+      }
+
+      h4 {
+        font-size: 1.3rem;
+        color: #8e44ad;
+        font-family: 'Inconsolata', monospace;
+        font-weight: 600; // A lighter weight for differentiation
+        margin-bottom: 0.3rem;
+      }
+
+      .workDuration {
+        font-size: 1rem;
+        color: #666666;
+        margin-bottom: 1.2rem;
+        font-family: 'Inconsolata', monospace;
+      }
+    }
+
+    .right {
+      margin-top: 1.2rem;
+      font-size: 1.1rem;
+      color: #444444;
+      font-family: 'Inconsolata', monospace;
+
+      p {
+        margin-top: 0.4rem;
+        line-height: 1.5;
+      }
+    }
+  }
+}
+
+// Keyframes for floating butterfly animation
+@keyframes float {
+  0% {
+    transform: translateY(0) rotate(-15deg);
+  }
+  50% {
+    transform: translateY(-15px) rotate(-15deg);
+  }
+  100% {
+    transform: translateY(0) rotate(-15deg);
+  }
+}

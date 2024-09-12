@@ -1,0 +1,118 @@
+// Keyframe for gradient background animation
+@keyframes gradientShift {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+  
+  // Base styles for the full-width section
+  .educationSection {
+    width: 100vw; // Full width of the viewport
+    padding: 3rem 1rem;
+    background: linear-gradient(135deg, #FFEBD4, #FFC6C6, #F7B5CA, #F0A8D0);
+    background-size: 400% 400%;
+    animation: gradientShift 10s ease infinite; // Smooth background animation
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh; // Extend section to cover full height
+  }
+  
+  .educationTitle {
+    text-align: center;
+    margin-bottom: 2.5rem;
+  
+    h2 {
+      font-size: 3rem;
+      color: #F0A8D0;
+      font-weight: bold;
+      @media (max-width: 768px) {
+        font-size: 2.5rem;
+      }
+      @media (max-width: 480px) {
+        font-size: 2rem;
+      }
+    }
+  }
+  
+  // Responsive container for education cards
+  .educationContainer {
+    width: 100%;
+    max-width: 1200px; // Limit width on larger screens
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+  
+  // Individual education card styles
+  .educationCard {
+    background-color: rgba(255, 198, 198, 0.8); // Semi-transparent
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: space-between;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  
+    &:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+    }
+  
+    @media (max-width: 768px) {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  
+    @media (max-width: 480px) {
+      padding: 1.5rem;
+    }
+  
+    .left {
+      h3 {
+        font-size: 1.8rem;
+        font-weight: 600;
+        color: #F7B5CA;
+        margin-bottom: 0.5rem;
+  
+        @media (max-width: 768px) {
+          font-size: 1.6rem;
+        }
+        @media (max-width: 480px) {
+          font-size: 1.4rem;
+        }
+      }
+  
+      .degree {
+        font-size: 1.4rem;
+        color: #F0A8D0;
+        margin-bottom: 0.5rem;
+  
+        @media (max-width: 768px) {
+          font-size: 1.3rem;
+        }
+        @media (max-width: 480px) {
+          font-size: 1.1rem;
+        }
+      }
+  
+      .year {
+        font-size: 1.2rem;
+        color: #F0A8D0;
+  
+        @media (max-width: 768px) {
+          font-size: 1.1rem;
+        }
+        @media (max-width: 480px) {
+          font-size: 1rem;
+        }
+      }
+    }
+  }
+  

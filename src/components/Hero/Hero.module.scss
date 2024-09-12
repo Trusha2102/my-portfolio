@@ -1,0 +1,28 @@
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@200..900&display=swap');
+
+.hero {
+    height: 40vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #FBF0B2, #FFC7EA, #D8B4F8, #CAEDFF);
+    font-family: 'Inconsolata', monospace;
+    text-align: center;
+    padding: 0 2rem;
+    color: #333;
+
+    .content {
+        max-width: 800px;
+
+        h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            color: #4A2A6A; // Darker purple for better contrast
+        }
+
+        p {
+            font-size: 1.5rem;
+            color: #2C2C2C; // Dark gray for readability
+        }
+    }
+}

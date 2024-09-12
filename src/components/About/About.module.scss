@@ -1,0 +1,25 @@
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@200..900&display=swap');
+
+.about {
+    padding: 4rem 2rem;
+    background-color: #F0F4F8; // Light background for contrast
+    font-family: 'Inconsolata', monospace;
+    text-align: center;
+
+    .content {
+        max-width: 800px;
+        margin: 0 auto;
+
+        h2 {
+            font-size: 3rem;
+            color: #4A2A6A; // Darker purple for headings
+            margin-bottom: 1.5rem;
+        }
+
+        p {
+            font-size: 1.25rem;
+            color: #333; // Dark gray for text
+            line-height: 1.6;
+        }
+    }
+}
