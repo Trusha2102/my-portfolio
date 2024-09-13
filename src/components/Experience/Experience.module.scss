@@ -6,6 +6,8 @@
   border-radius: 0; // Straight edges
   position: relative;
   font-family: 'Inconsolata', monospace; // Apply the font family globally
+  width: 100vw; // Set full viewport width to avoid black line
+  overflow-x: hidden; // Hide any possible overflow
 
   .experienceTitle {
     text-align: center;

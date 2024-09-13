@@ -5,6 +5,8 @@
     background-color: #F0F4F8; // Light background for contrast
     font-family: 'Inconsolata', monospace;
     text-align: center;
+    width: 100vw; // Set full viewport width to ensure no black lines
+    overflow-x: hidden; // Hide any possible overflow
 
     .content {
         max-width: 800px;
