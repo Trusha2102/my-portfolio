@@ -1,118 +1,149 @@
-// Keyframe for gradient background animation
-@keyframes gradientShift {
-    0% {
-      background-position: 0% 50%;
-    }
-    50% {
-      background-position: 100% 50%;
-    }
-    100% {
-      background-position: 0% 50%;
-    }
-  }
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@200..900&display=swap');
+
+.educationSection {
+  width: 100vw;
+  padding: 3rem 1rem;
+  background: linear-gradient(135deg, #F7EFE5, #E2BFD9); 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+  position: relative;
+  overflow: hidden;
+  animation: fadeIn 1s ease-in;
   
-  // Base styles for the full-width section
-  .educationSection {
-    width: 100vw; // Full width of the viewport
-    padding: 3rem 1rem;
-    background: linear-gradient(135deg, #FFEBD4, #FFC6C6, #F7B5CA, #F0A8D0);
-    background-size: 400% 400%;
-    animation: gradientShift 10s ease infinite; // Smooth background animation
-    display: flex;
+  @keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+  }
+
+  font-family: 'Inconsolata', monospace;
+}
+
+.educationTitle {
+  text-align: center;
+  margin-bottom: 2.5rem;
+
+  h2 {
+    font-size: 3rem;
+    color: #674188;
+    font-weight: bold;
+    @media (max-width: 768px) { font-size: 2.5rem; }
+    @media (max-width: 480px) { font-size: 2rem; }
+  }
+}
+
+.educationContainer {
+  width: 100%;
+  max-width: 1200px;
+  display: flex;
+  justify-content: space-between;
+  gap: 2rem;
+  @media (max-width: 768px) {
     flex-direction: column;
     align-items: center;
-    min-height: 100vh; // Extend section to cover full height
   }
-  
-  .educationTitle {
-    text-align: center;
-    margin-bottom: 2.5rem;
-  
-    h2 {
-      font-size: 3rem;
-      color: #F0A8D0;
-      font-weight: bold;
-      @media (max-width: 768px) {
-        font-size: 2.5rem;
-      }
-      @media (max-width: 480px) {
-        font-size: 2rem;
-      }
-    }
+}
+
+.educationCard {
+  width: 400px;
+  height: 580px;
+  perspective: 1000px;
+  transition: transform 2s;
+  position: relative;
+  cursor: pointer;
+
+  &:hover .cardInner {
+    transform: rotateY(180deg);
   }
-  
-  // Responsive container for education cards
-  .educationContainer {
-    width: 100%;
-    max-width: 1200px; // Limit width on larger screens
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
+
+  @media (max-width: 768px) { width: 90%; height: 300px; }
+  @media (max-width: 480px) { width: 100%; height: 280px; }
+}
+
+.cardInner {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  transform-style: preserve-3d;
+  transition: transform 0.6s;
+}
+
+.cardFront, .cardBack {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border-radius: 10px;
+}
+
+.cardFront {
+  background-color: #ffffff;
+  padding: 2rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border: 1px solid #E2BFD9;
+}
+
+.cardBack {
+  background-color: #f2f2f2;
+  color: #674188;
+  transform: rotateY(180deg);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+}
+
+.image {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+  transition: transform 0.3s ease;
+}
+
+.content {
+  text-align: center;
+
+  h3 {
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: #674188;
+    margin-bottom: 0.5rem;
+    @media (max-width: 768px) { font-size: 1.6rem; }
+    @media (max-width: 480px) { font-size: 1.4rem; }
   }
-  
-  // Individual education card styles
-  .educationCard {
-    background-color: rgba(255, 198, 198, 0.8); // Semi-transparent
-    padding: 2rem;
-    border-radius: 10px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    display: flex;
-    justify-content: space-between;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-  
-    &:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
-    }
-  
-    @media (max-width: 768px) {
-      flex-direction: column;
-      align-items: flex-start;
-    }
-  
-    @media (max-width: 480px) {
-      padding: 1.5rem;
-    }
-  
-    .left {
-      h3 {
-        font-size: 1.8rem;
-        font-weight: 600;
-        color: #F7B5CA;
-        margin-bottom: 0.5rem;
-  
-        @media (max-width: 768px) {
-          font-size: 1.6rem;
-        }
-        @media (max-width: 480px) {
-          font-size: 1.4rem;
-        }
-      }
-  
-      .degree {
-        font-size: 1.4rem;
-        color: #F0A8D0;
-        margin-bottom: 0.5rem;
-  
-        @media (max-width: 768px) {
-          font-size: 1.3rem;
-        }
-        @media (max-width: 480px) {
-          font-size: 1.1rem;
-        }
-      }
-  
-      .year {
-        font-size: 1.2rem;
-        color: #F0A8D0;
-  
-        @media (max-width: 768px) {
-          font-size: 1.1rem;
-        }
-        @media (max-width: 480px) {
-          font-size: 1rem;
-        }
-      }
-    }
+
+  .degree {
+    font-size: 1.4rem;
+    color: #674188;
+    margin-bottom: 0.5rem;
+    @media (max-width: 768px) { font-size: 1.3rem; }
+    @media (max-width: 480px) { font-size: 1.1rem; }
   }
-  
+
+  .year {
+    font-size: 1.2rem;
+    color: #674188;
+    @media (max-width: 768px) { font-size: 1.1rem; }
+    @media (max-width: 480px) { font-size: 1rem; }
+  }
+}
+
+.percentage {
+  font-size: 1.8rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.bulletPoints {
+  list-style-type: disc;
+  padding-left: 1.5rem;
+
+  li {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+  }
+}
