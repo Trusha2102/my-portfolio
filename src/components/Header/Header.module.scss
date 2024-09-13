@@ -9,6 +9,8 @@
     align-items: center; // Center content vertically
     justify-content: center; // Center content horizontally
     position: relative; // Ensure positioning context for alignment
+    width: 100vw; // Ensure full viewport width
+    overflow-x: hidden; // Hide horizontal overflow
 
     nav {
         display: flex;
