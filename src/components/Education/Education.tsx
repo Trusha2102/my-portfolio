@@ -24,7 +24,7 @@ const Education = () => {
       image: "/Student_2.jpg",
     },
     {
-      institution: "Dr. Subhash University",
+      institution: "Dr. Subhash University, Junagadh",
       degree: "B.E. in Computer Science & Engineering",
       year: "2020 - 2024",
       percentage: "8.73 CGPA",
@@ -34,7 +34,7 @@ const Education = () => {
   ];
 
   return (
-    <section className={styles.educationSection}>
+    <section id="education" className={styles.educationSection}>
       <div className={styles.educationTitle}>
         <h2>Education</h2>
       </div>

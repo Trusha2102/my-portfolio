@@ -1,0 +1,109 @@
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@200..900&display=swap');
+
+.skillsSection {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: 4rem 1rem;
+  background-color: white; /* White background for the whole component */
+  font-family: 'Inconsolata', monospace;
+
+  .sectionTitle {
+    font-size: 3rem; /* Title font size */
+    font-weight: 500;
+    color: #0F67B1; /* Dark Blue for the title */
+    text-align: center; /* Center-align the title */
+    margin-bottom: 4rem; /* Space below the title */
+  }
+}
+
+.section {
+  display: flex;
+  align-items: center;
+  margin-bottom: 3rem; /* Increased space between sections */
+  width: 100%;
+  justify-content: center; /* Center the content horizontally within the section */
+
+  &:nth-child(even) {
+    flex-direction: row-reverse; /* Alternates layout direction */
+  }
+}
+
+.squarishBox {
+  width: 35%; /* Increased size for the square */
+  padding: 2rem; /* Increased padding */
+  background-color: #D1E9F6; /* Light Blue background for the big tiles */
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  height: auto; /* Adjust height */
+  padding-top: 0; /* Remove aspect ratio padding */
+  position: relative;
+
+  .title {
+    font-size: 2rem; /* Increased font size */
+    font-weight: 400;
+    color: #0F67B1; /* Dark Blue for the title */
+    margin-bottom: 1.5rem; /* Increased margin below the title */
+    margin-top: 1rem; /* Added margin above the title */
+    text-align: center; /* Center the title text */
+  }
+
+  .techTiles {
+    display: grid; /* Changed to grid layout */
+    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr)); /* Increased minimum size */
+    gap: 0.75rem; /* Increased gap */
+    padding: 0.75rem; /* Increased padding */
+
+    .tile {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      background-color: #F6EACB; /* Light Beige for the skill tiles */
+      border-radius: 8px;
+      padding: 0.75rem; /* Increased padding */
+      width: 100%; /* Full width of the grid cell */
+      height: auto; /* Adjust height */
+      box-shadow: none; /* Removed shadow */
+      transition: background-color 0.3s ease, transform 0.3s ease; /* Transition effect for smooth hover */
+
+      img {
+        width: 35px; /* Increased icon size */
+        height: 35px; /* Increased icon size */
+        margin-right: 0.75rem; /* Adjusted margin */
+        transition: transform 0.3s ease; /* Smooth icon hover effect */
+      }
+
+      .techName {
+        font-size: 0.9rem; /* Slightly increased font size */
+        color: #0F67B1; /* Dark Blue for the tech names */
+      }
+
+      &:hover {
+        background-color: #0F67B1; /* Change background on hover */
+        transform: scale(1.05); /* Slightly scale up the tile on hover */
+
+        img {
+          transform: scale(1.1); /* Scale the icon slightly */
+        }
+
+        .techName {
+          color: #F6EACB; /* Change the text color on hover */
+        }
+      }
+    }
+  }
+}
+
+.image {
+  width: 35%; /* Increased size for the image */
+  margin-left: 8rem; /* Increased space between image and square */
+  margin-right: 8rem; /* Additional space on the other side if needed */
+  
+  img {
+    width: 100%; /* Ensures the image takes full width of the container */
+    height: auto; /* Maintains the original aspect ratio */
+    border-radius: 10px;
+    box-shadow: none; /* Removed shadow */
+  }
+}

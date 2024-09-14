@@ -5,24 +5,12 @@ export default function Header() {
     return (
         <header className={styles.header}>
             <nav>
-                <Link href="/about" className={styles.link}>
-                    About
-                </Link>
-                <Link href="/contact" className={styles.link}>
-                    Contact Me
-                </Link>
-                <Link href="/experience" className={styles.link}>
-                    Experience
-                </Link>
-                <Link href="/education" className={styles.link}>
-                    Education
-                </Link>
-                <Link href="/skills" className={styles.link}>
-                    Skills
-                </Link>
-                <Link href="/projects" className={styles.link}>
-                    Projects
-                </Link>
+                <a href="#about" className={styles.link}>About</a>
+                <a href="#contact" className={styles.link}>Contact Me</a>
+                <a href="#experience" className={styles.link}>Experience</a>
+                <a href="#education" className={styles.link}>Education</a>
+                <a href="#skills" className={styles.link}>Skills</a>
+                <a href="#projects" className={styles.link}>Projects</a>
             </nav>
         </header>
     );
