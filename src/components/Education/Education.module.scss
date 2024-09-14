@@ -2,12 +2,12 @@
 
 .educationSection {
   width: 100vw;
-  padding: 3rem 1rem;
+  padding: 2rem 1rem;
   background: linear-gradient(135deg, #F7EFE5, #E2BFD9); 
   display: flex;
   flex-direction: column;
   align-items: center;
-  min-height: 100vh;
+  min-height: 80vh;
   position: relative;
   overflow: hidden;
   animation: fadeIn 1s ease-in;
@@ -27,7 +27,7 @@
   h2 {
     font-size: 3rem;
     color: #674188;
-    font-weight: bold;
+    font-weight: 500;
 
     @media (max-width: 768px) { 
       font-size: 2.5rem; 

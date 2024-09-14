@@ -1,27 +1,41 @@
 @import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@200..900&display=swap');
 
 .about {
-    padding: 4rem 2rem;
-    background-color: #F0F4F8; // Light background for contrast
-    font-family: 'Inconsolata', monospace;
-    text-align: center;
-    width: 100vw; // Set full viewport width to ensure no black lines
-    overflow-x: hidden; // Hide any possible overflow
+  padding: 4rem 2rem;
+  background: linear-gradient(135deg, #7BD3EA, #A1EEBD, #F6F7C4, #F6D6D6); /* Gradient for colorful background */
+  font-family: 'Inconsolata', monospace;
+  text-align: center;
+  width: 100vw;
+  overflow-x: hidden;
 
-    .content {
-        max-width: 800px;
-        margin: 0 auto;
+  .content {
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: white; /* White background for content */
+    padding: 2rem;
+    border-radius: 15px; /* Rounded edges for the container */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
 
-        h2 {
-            font-size: 3rem;
-            color: #4A2A6A; // Darker purple for headings
-            margin-bottom: 1.5rem;
-        }
-
-        p {
-            font-size: 1.25rem;
-            color: #333; // Dark gray for text
-            line-height: 1.6;
-        }
+    h2 {
+      font-size: 2.5rem;
+      color: #4A2A6A; /* Darker purple for headings */
+      margin-bottom: 1.5rem;
+      transition: color 0.3s ease; /* Hover transition */
     }
+
+    p {
+      font-size: 1.25rem;
+      color: #333; /* Dark gray for text */
+      line-height: 1.6;
+      transition: transform 0.3s ease; /* Hover transition */
+    }
+
+    h2:hover {
+      color: #7BD3EA; /* Lighter blue hover effect for heading */
+    }
+
+    p:hover {
+      transform: scale(1.02); /* Slight hover effect to lift the text */
+    }
+  }
 }
