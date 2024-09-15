@@ -1,0 +1,145 @@
+.contactMeSection {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  background-color: #FFC7ED; /* Light blue background */
+  height: 70vh; /* Full viewport height */
+  overflow: hidden; /* Hide any overflow */
+
+  .headerSection {
+    display: flex;
+    flex-direction: row; /* Align items side by side */
+    align-items: center; /* Center items vertically */
+    justify-content: flex-start; /* Align items to the start of the flex container */
+    background-color: #fff; /* White background for header section */
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 80vw; /* 80% of viewport width */
+    height: 50vh; /* 70% of viewport height */
+    position: relative; /* Position context for the firefly */
+
+    .textSection {
+      flex: 1; /* Take up remaining space */
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start; /* Align content to the top */
+      align-items: flex-start; /* Align content to the left */
+      max-width: 50%; /* Limit width to half of headerSection width */
+      text-align: left; /* Align text to the left */
+      margin-right: 2rem; /* Margin to the right to separate from imageSection */
+      
+      h2 {
+        font-size: 2.5rem; /* Slightly smaller heading */
+        color: #333;
+        margin-bottom: 1rem;
+      }
+
+      p {
+        font-size: 1.25rem; /* Slightly smaller font size */
+        color: #555;
+        line-height: 1.6; /* Increase line height for readability */
+        max-width: 500px; /* Limit the width of the text block */
+        margin-bottom: 1rem; /* Add bottom margin */
+      }
+
+      .resumeButton {
+        margin-top: 1.5rem; /* Add space between text and button */
+        position: relative;
+        display: inline-block;
+        cursor: pointer;
+        outline: none;
+        border: 0;
+        vertical-align: middle;
+        text-decoration: none;
+        font-family: inherit;
+        font-size: 13px; /* Smaller font size */
+        font-weight: 600;
+        color: #382b22;
+        text-transform: uppercase;
+        padding: 0.75em 1.5em; /* Smaller padding */
+        background: #fff0f0;
+        border: 2px solid #b18597;
+        border-radius: 0.5em; /* Smaller border radius */
+        -webkit-transform-style: preserve-3d;
+        transform-style: preserve-3d;
+        -webkit-transition: background 150ms cubic-bezier(0, 0, 0.58, 1), -webkit-transform 150ms cubic-bezier(0, 0, 0.58, 1);
+        transition: transform 150ms cubic-bezier(0, 0, 0.58, 1), background 150ms cubic-bezier(0, 0, 0.58, 1), -webkit-transform 150ms cubic-bezier(0, 0, 0.58, 1);
+
+        &::before {
+          position: absolute;
+          content: '';
+          width: 100%;
+          height: 100%;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          background: #f9c4d2;
+          border-radius: inherit;
+          -webkit-box-shadow: 0 0 0 2px #b18597, 0 0.625em 0 0 #ffe3e2;
+          box-shadow: 0 0 0 2px #b18597, 0 0.625em 0 0 #ffe3e2;
+          -webkit-transform: translate3d(0, 0.75em, -1em);
+          transform: translate3d(0, 0.75em, -1em);
+          transition: transform 150ms cubic-bezier(0, 0, 0.58, 1), box-shadow 150ms cubic-bezier(0, 0, 0.58, 1), -webkit-transform 150ms cubic-bezier(0, 0, 0.58, 1), -webkit-box-shadow 150ms cubic-bezier(0, 0, 0.58, 1);
+        }
+
+        &:hover {
+          background: #ffe9e9;
+          -webkit-transform: translate(0, 0.25em);
+          transform: translate(0, 0.25em);
+        }
+
+        &:hover::before {
+          -webkit-box-shadow: 0 0 0 2px #b18597, 0 0.5em 0 0 #ffe3e2;
+          box-shadow: 0 0 0 2px #b18597, 0 0.5em 0 0 #ffe3e2;
+          -webkit-transform: translate3d(0, 0.5em, -1em);
+          transform: translate3d(0, 0.5em, -1em);
+        }
+
+        &:active {
+          background: #ffe9e9;
+          -webkit-transform: translate(0em, 0.75em);
+          transform: translate(0em, 0.75em);
+        }
+
+        &:active::before {
+          -webkit-box-shadow: 0 0 0 2px #b18597, 0 0 #ffe3e2;
+          box-shadow: 0 0 0 2px #b18597, 0 0 #ffe3e2;
+          -webkit-transform: translate3d(0, 0, -1em);
+          transform: translate3d(0, 0, -1em);
+        }
+      }
+    }
+
+    .imageSection {
+      position: relative;
+      flex: 2; /* Ensure the image section takes up the remaining space */
+      height: 100%; /* Full height of the headerSection */
+      background-color: #f6eacb; /* A soft beige background */
+      border-radius: 10px;
+      // overflow: ; /* Ensure the image is fully visible */
+
+      .image {
+        width: 100%;
+        height: 100%;
+        object-fit: cover; /* Prevents cropping and maintains aspect ratio */
+        border-radius: 10px;
+      }
+    }
+
+    .firefly {
+      position: absolute;
+      width: 50px; /* Original size */
+      height: 50px; /* Original size */
+      background-image: url('/firefly.png'); /* Firefly icon path */
+      background-size: cover;
+      background-position: center;
+      border-radius: 50%;
+      box-shadow: 0 0 20px 10px yellow; /* Enhanced glowing effect */
+      transition: transform 2s ease-in-out; /* Slower and smoother movement */
+      pointer-events: none; /* Ensures the firefly doesn't interfere with clicks */
+    }
+  }
+}
