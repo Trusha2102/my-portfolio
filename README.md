@@ -4,7 +4,7 @@ This is my personal portfolio website, showcasing my skills, projects, and profe
 
 ## 🚀 Live Demo
 
-You can view the live site here: [My Portfolio](https://yourusername.github.io/your-repository-name/)
+You can view the live site here: [My Portfolio]((https://github.com/Trusha2102/my-portfolio.git))
 
 ## 📂 Project Structure
 
@@ -38,13 +38,13 @@ Ensure you have **Node.js** and **npm** (or **yarn**) installed.
 1. Clone the repository:
 
    ```bash
-   git clone https://github.com/yourusername/your-repository-name.git
+   git clone https://github.com/Trusha2102/my-portfolio.git
    ```
 
 2. Navigate to the project directory:
 
    ```bash
-   cd your-repository-name
+   cd my-portfolio
    ```
 
 3. Install the dependencies:
@@ -86,7 +86,7 @@ This will create an optimized version of your portfolio in the `build/` folder, 
    Add the following scripts:
 
    ```json
-   "homepage": "https://yourusername.github.io/your-repository-name",
+   "homepage": "https://github.com/Trusha2102/my-portfolio.git",
    "scripts": {
      "predeploy": "npm run build",
      "deploy": "gh-pages -d build"
