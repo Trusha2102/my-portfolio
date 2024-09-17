@@ -5,28 +5,46 @@ import styles from './Project.module.scss';
 const ProjectsComponent = () => {
   const projects = [
     {
-      title: 'HDFC International',
-      image: '/hdfc.jpg',
-      description: 'Bank-related website focused on child education funding and savings, including foreign education options and more.',
-      link: 'https://www.hdfclife-international.com/', 
+      title: "HDFC International",
+      image: "/hdfc.jpg",
+      description:
+        "Bank-related website focused on child education funding and savings, including foreign education options and more.",
+      link: "https://www.hdfclife-international.com/",
     },
     {
-      title: 'College Management System',
-      image: '/college.jpg',
-      description: 'Comprehensive management system for student registration, class handling, fees management, and reporting.',
-      link: 'https://cms-api-admin.surge.sh/#/homePage',
+      title: "College Management System",
+      image: "/college.jpg",
+      description:
+        "Comprehensive management system for student registration, class handling, fees management, and reporting.",
+      link: "https://cms-api-admin.surge.sh/#/homePage",
     },
     {
-      title: 'All \'Bout Pets',
-      image: '/dog.png',
-      description: 'Platform for Pet Parents, Pet Sellers, Pet Sitters, and Pet Care Givers with user privacy and dashboard features.',
-      link: 'https://allboutpets.onrender.com/', 
+      title: "All 'Bout Pets",
+      image: "/dog.png",
+      description:
+        "Platform for Pet Parents, Pet Sellers, Pet Sitters, and Pet Care Givers with user privacy and dashboard features.",
+      link: "https://allboutpets.onrender.com/",
     },
     {
-      title: 'Hotel Management System',
-      image: '/hotel.jpg',
-      description: 'Hotel dashboard showing hotel packages, pictures, and detailed information.',
-      link: 'https://dn-hotel.onrender.com/', 
+      title: "Hotel Management System",
+      image: "/hotel.jpg",
+      description:
+        "Hotel dashboard showing hotel packages, pictures, and detailed information.",
+      link: "https://dn-hotel.onrender.com/",
+    },
+    {
+      title: "ShipsGo",
+      image: "/port.png",
+      description:
+        "Web app for managing and tracking incoming containers at ports, optimizing logistics and inventory.",
+      link: "https://github.com/GovindxSharma/YMs-v2",
+    },
+    {
+      title: "My Portfolio",
+      image: "/portfolio.png",
+      description:
+        "Interactive portfolio website showcasing my projects, skills, and professional achievements.",
+      link: "https://github.com/Trusha2102/my-portfolio",
     },
   ];
 

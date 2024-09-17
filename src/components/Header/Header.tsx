@@ -21,7 +21,7 @@ export default function Header() {
             Projects
           </a>
           <a href="#contact" className={styles.link}>
-            Contact Me
+            Contact
           </a>
         </nav>
       </header>

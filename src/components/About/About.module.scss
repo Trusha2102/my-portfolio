@@ -1,9 +1,13 @@
-@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@200..900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Inconsolata:wght@200..900&display=swap");
 
 .about {
   padding: 4rem 2rem;
-  background: linear-gradient(135deg, #7BD3EA, #A1EEBD, #F6F7C4, #F6D6D6); /* Gradient for colorful background */
-  font-family: 'Inconsolata', monospace;
+  background: linear-gradient(
+    135deg,
+  #BBE9FF,
+#B1AFFF
+  ); /* Gradient for colorful background */
+  font-family: "Inconsolata", monospace;
   text-align: center;
   width: 100vw;
   overflow-x: hidden;
@@ -11,31 +15,38 @@
   .content {
     max-width: 800px;
     margin: 0 auto;
-    background-color: white; /* White background for content */
+    background-color: #ffffff; /* White background for content */
     padding: 2rem;
     border-radius: 15px; /* Rounded edges for the container */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* Enhanced shadow for depth */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transitions for hover effects */
+
+    &:hover {
+      transform: translateY(-5px); /* Slight lift effect on hover */
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.3); /* Deepened shadow on hover */
+    }
 
     h2 {
-      font-size: 2.5rem;
-      color: #4A2A6A; /* Darker purple for headings */
+      font-size: 2.8rem; /* Larger heading for better emphasis */
+      color: #4a2a6a; /* Darker purple for headings */
       margin-bottom: 1.5rem;
-      transition: color 0.3s ease; /* Hover transition */
+      transition: color 0.3s ease; /* Smooth color transition */
     }
 
     p {
-      font-size: 1.25rem;
+      font-size: 1.2rem;
       color: #333; /* Dark gray for text */
-      line-height: 1.6;
-      transition: transform 0.3s ease; /* Hover transition */
+      line-height: 1.8; /* Increased line height for readability */
+      transition: color 0.3s ease, transform 0.3s ease; /* Smooth transitions */
     }
 
     h2:hover {
-      color: #7BD3EA; /* Lighter blue hover effect for heading */
+      color: #7bd3ea; /* Lighter blue hover effect for heading */
     }
 
     p:hover {
-      transform: scale(1.02); /* Slight hover effect to lift the text */
+      color: #6e3f6f; /* Slight color change on hover for emphasis */
+      transform: scale(1.03); /* Slight hover effect to lift the text */
     }
   }
 }
