@@ -31,16 +31,26 @@ const Connect = () => {
     return () => clearInterval(interval); // Cleanup the interval on component unmount
   }, []);
 
+  // Function to scroll to the Contact section
+  const scrollToContact = () => {
+    const contactElement = document.getElementById("contact");
+    if (contactElement) {
+      contactElement.scrollIntoView({ behavior: "smooth", block: "start" });
+    }
+  };
+
   return (
     <div className={styles.contactMeSection}>
       <div className={styles.headerSection}>
         <div className={styles.textSection}>
-          <h2>Let's Connect!</h2>
+          <h2>Let&rsquo;s Connect!</h2>
           <p>
-            I'd love to hear from you! Whether you have a project in mind, a
-            question, or just want to say hello, feel free to reach out.
+            I&rsquo;d love to hear from you! Whether you have a project in mind,
+            a question, or just want to say hello, feel free to reach out.
           </p>
-          <button className={styles.resumeButton}>Let's Connect</button>
+          <button className={styles.resumeButton} onClick={scrollToContact}>
+            Let&rsquo;s Connect
+          </button>
         </div>
         <div className={styles.imageSection}>
           <img

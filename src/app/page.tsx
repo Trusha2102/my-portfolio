@@ -5,8 +5,8 @@ import Experience from "@/components/Experience/Experience";
 import Education from "@/components/Education/Education";
 import ProjectsComponent from "@/components/Project/Project";
 import Skills from "@/components/Skills/Skills";
-import Connect
-  from "@/components/Connect/Connect";
+import Connect from "@/components/Connect/Connect";
+import ContactMe from "@/components/Contact/Contact";
 
 export default function Home() {
   return (
@@ -19,6 +19,7 @@ export default function Home() {
       <ProjectsComponent />
       <Skills />
       <Connect />
+      <ContactMe />
     </>
   );
 }
