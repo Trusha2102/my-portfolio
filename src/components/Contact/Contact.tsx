@@ -1,4 +1,8 @@
-import React from "react";
+"use client";
+
+import React, { useState } from "react";
+import { toast, ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css"; // Import the styles
 import styles from "./Contact.module.scss";
 import {
   FaGithub,
@@ -9,17 +13,85 @@ import {
 } from "react-icons/fa";
 
 const Contact = () => {
+  const [formData, setFormData] = useState({
+    name: "",
+    phone: "",
+    email: "",
+    message: "",
+  });
+
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
+    const { name, value } = e.target;
+    setFormData({
+      ...formData,
+      [name]: value,
+    });
+  };
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+
+    try {
+      const apiUrl =
+        (process.env.REACT_APP_API_URL as string) ||
+        "http://localhost:5000/api/send-email";
+
+      if (!apiUrl) {
+        console.error("API URL is missing. Check your .env file.");
+        toast.error("API URL not found. Please check your configuration.");
+        return;
+      }
+
+      const response = await fetch(apiUrl, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      });
+
+      if (response.ok) {
+        toast.success("Message sent successfully!");
+        setFormData({ name: "", phone: "", email: "", message: "" }); // Clear form after successful submission
+      } else {
+        const errorData = await response.json();
+        console.error("Error response:", errorData);
+        toast.error(
+          `Error sending message: ${errorData.error || "Unknown error"}`
+        );
+      }
+    } catch (error) {
+      console.error("Error sending message:", error);
+      toast.error(
+        "Error sending message. Please check the console for more details."
+      );
+    }
+  };
+
   return (
     <section id="contact" className={styles.contactSection}>
+      {/* ToastContainer for displaying notifications */}
+      <ToastContainer position="top-right" autoClose={5000} hideProgressBar />
+
       <div className={styles.imageSection}>
         <img src="/contact.png" alt="Contact support illustration" />
       </div>
       <div className={styles.formSection}>
         <div className={styles.formContainer}>
           <h2 className={styles.formTitle}>Contact Me</h2>
-          <form className={styles.contactForm}>
+          <form className={styles.contactForm} onSubmit={handleSubmit}>
             <label htmlFor="name">Name:</label>
-            <input type="text" id="name" name="name" placeholder="Your Name" />
+            <input
+              type="text"
+              id="name"
+              name="name"
+              placeholder="Your Name"
+              value={formData.name}
+              onChange={handleChange}
+              required
+            />
 
             <label htmlFor="phone">Phone:</label>
             <input
@@ -27,6 +99,8 @@ const Contact = () => {
               id="phone"
               name="phone"
               placeholder="Your Phone Number"
+              value={formData.phone}
+              onChange={handleChange}
             />
 
             <label htmlFor="email">Email:</label>
@@ -35,6 +109,9 @@ const Contact = () => {
               id="email"
               name="email"
               placeholder="Your Email"
+              value={formData.email}
+              onChange={handleChange}
+              required
             />
 
             <label htmlFor="message">Message:</label>
@@ -43,6 +120,9 @@ const Contact = () => {
               name="message"
               rows={5}
               placeholder="Your Message"
+              value={formData.message}
+              onChange={handleChange}
+              required
             ></textarea>
 
             <button

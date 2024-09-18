@@ -28,23 +28,25 @@
       flex-direction: column;
       justify-content: flex-start; /* Align content to the top */
       align-items: flex-start; /* Align content to the left */
-      max-width: 50%; /* Limit width to half of headerSection width */
-      text-align: left; /* Align text to the left */
+      max-width: 100%; /* Limit width to the container width */
+      text-align: justify; /* Justify text alignment */
       margin-right: 2rem; /* Margin to the right to separate from imageSection */
       font-family: 'Inconsolata', monospace; /* Apply the font here */
+      box-sizing: border-box; /* Include padding and border in element’s total width and height */
       
       h2 {
         font-size: 2.5rem; /* Slightly smaller heading */
         color: #333;
         margin-bottom: 1rem;
+        word-wrap: break-word; /* Ensure heading fits inside the container */
       }
 
       p {
         font-size: 1.25rem; /* Slightly smaller font size */
         color: #555;
         line-height: 1.6; /* Increase line height for readability */
-        max-width: 500px; /* Limit the width of the text block */
         margin-bottom: 1rem; /* Add bottom margin */
+        overflow-wrap: break-word; /* Break words to prevent overflow */
       }
 
       .resumeButton {
@@ -134,5 +136,40 @@
       transition: transform 2s ease-in-out; /* Slower and smoother movement */
       pointer-events: none; /* Ensures the firefly doesn't interfere with clicks */
     }
+  }
+}
+
+@media (max-width: 768px) {
+  .contactMeSection {
+    height: auto; /* Adjust height for small screens */
+    padding: 1rem; /* Reduce padding */
+  }
+
+  .headerSection {
+    flex-direction: column; /* Stack text and image vertically */
+    width: 90vw; /* Adjust width for smaller screens */
+    height: auto; /* Auto height to fit content */
+    padding: 1rem; /* Reduce padding */
+  }
+
+  .textSection {
+    max-width: 100%; /* Full width on smaller screens */
+    margin-right: 0; /* Remove margin on smaller screens */
+    text-align: justify; /* Justify text alignment */
+    box-sizing: border-box; /* Include padding and border in element’s total width and height */
+  }
+
+  .imageSection {
+    display: none; /* Hide image section on smaller screens */
+  }
+
+  .resumeButton {
+    font-size: 12px; /* Slightly smaller font size */
+    padding: 0.5em 1em; /* Adjust padding */
+  }
+
+  .firefly {
+    width: 30px; /* Smaller firefly icon size */
+    height: 30px; /* Smaller firefly icon size */
   }
 }

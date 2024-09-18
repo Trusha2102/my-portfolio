@@ -25,7 +25,7 @@ const Education = () => {
     },
     {
       institution: "Dr. Subhash University, Junagadh",
-      degree: "B.E. in Computer Science & Engineering",
+      degree: "B.E. in Computer Science",
       year: "2020 - 2024",
       percentage: "8.73 CGPA",
       details: ["Computer Science Major", "Served as Class Representative (CR)", "Got placement in 2nd Year of College"],

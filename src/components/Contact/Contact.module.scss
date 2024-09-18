@@ -9,6 +9,7 @@
   padding: 20px;
   box-sizing: border-box; /* Ensure padding and border are included in the element's total width and height */
   border: none; /* Ensure no extra border is applied */
+  flex-wrap: wrap; /* Allow items to wrap on smaller screens */
 }
 
 .imageSection {
@@ -177,4 +178,33 @@
 .learnMoreButton.learnMore:active::before {
   box-shadow: 0 0 0 2px #9B86BD, 0 0 #ffe3e2;
   transform: translate3d(0, 0, -1em);
+}
+
+/* Responsive styles for small screens */
+@media (max-width: 768px) {
+  .contactSection {
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center items horizontally */
+    padding: 10px;
+  }
+
+  .formSection {
+    width: 100%; /* Full width on small screens */
+    margin-bottom: 20px; /* Add space below the form */
+  }
+
+  .imageSection {
+    width: 100%; /* Full width on small screens */
+    margin-bottom: 20px; /* Add space below the image */
+  }
+
+  .socialIcons {
+    width: 100%; /* Full width on small screens */
+    justify-content: center; /* Center icons horizontally */
+    gap: 20px; /* Adjust gap between icons */
+  }
+  
+  .imageSection img {
+    display: none; /* Hide the image on small screens */
+  }
 }

@@ -27,6 +27,11 @@
   &:nth-child(even) {
     flex-direction: row-reverse; /* Alternates layout direction */
   }
+
+  @media (max-width: 768px) {
+    flex-direction: column; /* Stack content vertically for small screens */
+    text-align: center;
+  }
 }
 
 .squarishBox {
@@ -77,6 +82,9 @@
       .techName {
         font-size: 0.9rem; /* Slightly increased font size */
         color: #0F67B1; /* Dark Blue for the tech names */
+        white-space: nowrap; /* Prevents wrapping */
+        overflow: hidden; /* Hide overflow text */
+        text-overflow: ellipsis; /* Adds ellipsis for overflow */
       }
 
       &:hover {
@@ -99,11 +107,52 @@
   width: 35%; /* Increased size for the image */
   margin-left: 8rem; /* Increased space between image and square */
   margin-right: 8rem; /* Additional space on the other side if needed */
-  
+
   img {
     width: 100%; /* Ensures the image takes full width of the container */
     height: auto; /* Maintains the original aspect ratio */
     border-radius: 10px;
     box-shadow: none; /* Removed shadow */
+  }
+
+  @media (max-width: 768px) {
+    width: 100%; /* Full width on smaller screens */
+    margin: 0; /* Remove margins */
+    margin-bottom: 2rem; /* Space below the image */
+  }
+}
+
+@media (max-width: 768px) {
+  .section {
+    flex-direction: column; /* Stack description and image vertically for small screens */
+  }
+
+  .squarishBox {
+    width: 100%; /* Full width on smaller screens */
+    margin-bottom: 2rem; /* Space below the box */
+  }
+
+  .image {
+    width: 100%; /* Full width for the image */
+    margin: 0; /* Remove margins */
+    margin-bottom: 2rem; /* Space below the image */
+  }
+
+  .techTiles {
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr)); /* Adjust grid for smaller screens */
+    gap: 0.5rem; /* Reduce gap */
+  }
+
+  .tile {
+    padding: 0.5rem; /* Adjust padding */
+    
+    img {
+      width: 25px; /* Adjust icon size */
+      height: 25px;
+    }
+
+    .techName {
+      font-size: 0.75rem; /* Adjust font size */
+    }
   }
 }
