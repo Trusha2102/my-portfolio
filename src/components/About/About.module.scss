@@ -2,11 +2,7 @@
 
 .about {
   padding: 4rem 2rem;
-  background: linear-gradient(
-    135deg,
-  #BBE9FF,
-#B1AFFF
-  ); /* Gradient for colorful background */
+  background: linear-gradient(135deg, #BBE9FF, #B1AFFF);
   font-family: "Inconsolata", monospace;
   text-align: center;
   width: 100vw;
@@ -15,38 +11,96 @@
   .content {
     max-width: 800px;
     margin: 0 auto;
-    background-color: #ffffff; /* White background for content */
+    background-color: #ffffff;
     padding: 2rem;
-    border-radius: 15px; /* Rounded edges for the container */
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* Enhanced shadow for depth */
-    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transitions for hover effects */
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 
     &:hover {
-      transform: translateY(-5px); /* Slight lift effect on hover */
-      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.3); /* Deepened shadow on hover */
+      transform: translateY(-5px);
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.3);
     }
 
     h2 {
-      font-size: 2.8rem; /* Larger heading for better emphasis */
-      color: #4a2a6a; /* Darker purple for headings */
+      font-size: 2.8rem;
+      color: #4a2a6a;
       margin-bottom: 1.5rem;
-      transition: color 0.3s ease; /* Smooth color transition */
+      transition: color 0.3s ease;
     }
 
     p {
       font-size: 1.2rem;
-      color: #333; /* Dark gray for text */
-      line-height: 1.8; /* Increased line height for readability */
-      transition: color 0.3s ease, transform 0.3s ease; /* Smooth transitions */
+      color: #333;
+      line-height: 1.8;
+      transition: color 0.3s ease, transform 0.3s ease;
     }
 
     h2:hover {
-      color: #7bd3ea; /* Lighter blue hover effect for heading */
+      color: #7bd3ea;
     }
 
     p:hover {
-      color: #6e3f6f; /* Slight color change on hover for emphasis */
-      transform: scale(1.03); /* Slight hover effect to lift the text */
+      color: #6e3f6f;
+      transform: scale(1.03);
+    }
+
+    .resumeButton {
+      margin-top: 1.5rem;
+      position: relative;
+      display: inline-block;
+      cursor: pointer;
+      outline: none;
+      border: 0;
+      vertical-align: middle;
+      text-decoration: none;
+      font-family: 'Inconsolata', monospace;
+      font-size: 13px;
+      font-weight: 600;
+      color: #ffffff;
+      text-transform: uppercase;
+      padding: 0.75em 3em;
+      background: #7695FF; /* Base button color */
+      border: 2px solid #627CCC; /* Darker shade for border */
+      border-radius: 0.5em;
+      transform-style: preserve-3d;
+      transition: transform 150ms cubic-bezier(0, 0, 0.58, 1), background 150ms cubic-bezier(0, 0, 0.58, 1);
+
+      &::before {
+        position: absolute;
+        content: '';
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: #9DBDFF; /* Lighter version of base color */
+        border-radius: inherit;
+        box-shadow: 0 0 0 2px #627CCC, 0 0.625em 0 0 #D2E0FB; /* Updated shadow with lighter blue */
+        transform: translate3d(0, 0.75em, -1em);
+        transition: transform 150ms cubic-bezier(0, 0, 0.58, 1), box-shadow 150ms cubic-bezier(0, 0, 0.58, 1);
+      }
+
+      &:hover {
+        background: #5B79E6; /* Darker version of base color */
+        transform: translate(0, 0.25em);
+      }
+
+      &:hover::before {
+        box-shadow: 0 0 0 2px #627CCC, 0 0.5em 0 0 #D2E0FB;
+        transform: translate3d(0, 0.5em, -1em);
+      }
+
+      &:active {
+        background: #5B79E6; /* Active background color */
+        transform: translate(0em, 0.75em);
+      }
+
+      &:active::before {
+        box-shadow: 0 0 0 2px #627CCC, 0 0 #D2E0FB;
+        transform: translate3d(0, 0, -1em);
+      }
     }
   }
 }

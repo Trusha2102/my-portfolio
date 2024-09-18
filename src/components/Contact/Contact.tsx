@@ -1,8 +1,12 @@
-// Contact.js
-
 import React from "react";
 import styles from "./Contact.module.scss";
-import { FaGithub, FaInstagram, FaEnvelope, FaLinkedin } from "react-icons/fa";
+import {
+  FaGithub,
+  FaInstagram,
+  FaEnvelope,
+  FaLinkedin,
+  FaFileAlt,
+} from "react-icons/fa";
 
 const Contact = () => {
   return (
@@ -55,6 +59,7 @@ const Contact = () => {
             href="https://github.com/Trusha2102"
             target="_blank"
             rel="noopener noreferrer"
+            title="GitHub"
           >
             <FaGithub />
           </a>
@@ -62,18 +67,28 @@ const Contact = () => {
             href="https://instagram.com/trusha.js"
             target="_blank"
             rel="noopener noreferrer"
+            title="Instagram"
           >
             <FaInstagram />
           </a>
-          <a href="mailto:trushababjadeja2003@gmail.com">
+          <a href="mailto:trushababjadeja2003@gmail.com" title="Email">
             <FaEnvelope />
           </a>
           <a
             href="https://www.linkedin.com/in/trushaba-b-jadeja-149432284/"
             target="_blank"
             rel="noopener noreferrer"
+            title="LinkedIn"
           >
             <FaLinkedin />
+          </a>
+          <a
+            href="https://drive.google.com/file/d/1AV2vAwT86cQfVNIBxt3KhpjQcYdhFeDJ/view?usp=sharing"
+            target="_blank"
+            rel="noopener noreferrer"
+            title="Resume"
+          >
+            <FaFileAlt />
           </a>
         </div>
       </div>
