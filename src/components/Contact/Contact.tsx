@@ -155,7 +155,7 @@ const Contact = () => {
             <FaEnvelope />
           </a>
           <a
-            href="https://www.linkedin.com/in/trushaba-b-jadeja-149432284/"
+            href="https://www.linkedin.com/in/trusha-jadeja"
             target="_blank"
             rel="noopener noreferrer"
             title="LinkedIn"
