@@ -7,7 +7,6 @@
   background-color: #E2BBE9;
   width: 100%;
   padding: 20px;
-  // margin-top: 20px; /* Moves the container lower */
   box-sizing: border-box; /* Ensure padding and border are included in the element's total width and height */
   border: none; /* Ensure no extra border is applied */
 }
@@ -82,14 +81,40 @@
   gap: 30px;
   margin-top: 30px;
   font-size: 30px;
-}
 
-.socialIcons a {
-  color: #5A639C;
-  transition: color 0.3s ease;
+  a {
+    position: relative; /* Make the container relative for positioning the tooltip */
+    color: #5A639C;
+    transition: color 0.3s ease;
 
-  &:hover {
-    color: #9B86BD;
+    &:hover {
+      color: #9B86BD;
+    }
+
+    /* Tooltip styling */
+    &::after {
+      content: attr(title); /* Use the title attribute for tooltip content */
+      position: absolute;
+      bottom: 100%; /* Position the tooltip above the icon */
+      left: 50%;
+      transform: translateX(-50%);
+      background-color: #333; /* Tooltip background color */
+      color: #fff; /* Tooltip text color */
+      padding: 5px 10px;
+      border-radius: 4px;
+      white-space: nowrap;
+      opacity: 0; /* Initially hidden */
+      visibility: hidden;
+      font-size: 14px;
+      font-family: 'Inconsolata', monospace;
+      transition: opacity 0.3s ease, visibility 0.3s ease;
+    }
+
+    /* Show the tooltip on hover */
+    &:hover::after {
+      opacity: 1;
+      visibility: visible;
+    }
   }
 }
 
