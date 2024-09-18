@@ -11,13 +11,12 @@
   position: relative;
   overflow: hidden;
   animation: fadeIn 1s ease-in;
+  font-family: 'Inconsolata', monospace;
 
   @keyframes fadeIn {
     0% { opacity: 0; }
     100% { opacity: 1; }
   }
-
-  font-family: 'Inconsolata', monospace;
 }
 
 .educationTitle {
@@ -73,11 +72,11 @@
   }
   @media (max-width: 768px) { 
     width: 90%; 
-    height: 300px; 
+    height: 400px; // Increased height for mobile screens to prevent text overflow
   }
   @media (max-width: 480px) { 
     width: 100%; 
-    height: 280px; 
+    height: 450px; // Further increase height on smaller screens
   }
 }
 
@@ -124,10 +123,10 @@
   transition: transform 0.3s ease;
 
   @media (max-width: 768px) {
-    height: 150px;
+    height: 200px; // Increased image height for better proportion in mobile
   }
   @media (max-width: 480px) {
-    height: 140px;
+    height: 250px; // Further increase image height on smaller screens
   }
 }
 
@@ -157,7 +156,7 @@
       font-size: 1.3rem; 
     }
     @media (max-width: 480px) { 
-      font-size: 1.1rem; 
+      font-size: 1.2rem; 
     }
   }
 

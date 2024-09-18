@@ -1,74 +1,139 @@
 .projectsSection {
-    padding: 4rem 1rem;
-    background: linear-gradient(135deg, #F0F7FF, #E2BFD9);
-    text-align: center;
-    font-family: 'Inconsolata', monospace;
-  
-    .title {
-      font-size: 3rem;
-      color: #674188;
-      margin-bottom: 3rem;
+  padding: 4rem 1rem;
+  background: linear-gradient(135deg, #F0F7FF, #E2BFD9);
+  text-align: center;
+  font-family: 'Inconsolata', monospace;
+
+  .title {
+    font-size: 3rem;
+    color: #674188;
+    margin-bottom: 3rem;
+
+    @media (max-width: 768px) {
+      font-size: 2.5rem;
     }
-  
-    .projectsGrid {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      grid-gap: 5rem; // increased gap between tiles
-      max-width: 1200px;
-      margin: 0 auto;
-  
-      @media (max-width: 1200px) {
-        max-width: 90%;
-      }
-  
+
+    @media (max-width: 480px) {
+      font-size: 2rem;
+    }
+  }
+
+  .projectsGrid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 5rem;
+    max-width: 1200px;
+    margin: 0 auto;
+
+    @media (max-width: 1200px) {
+      max-width: 90%;
+    }
+
+    @media (max-width: 768px) {
+      grid-template-columns: 1fr;
+      grid-gap: 3rem; // Adjust gap for smaller screens
+    }
+  }
+
+  .projectLink {
+    text-decoration: none;
+  }
+
+  .projectCard {
+    display: flex;
+    background-color: white;
+    border: 1px solid #E2BFD9;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    height: 200px; // Default height for desktop
+    padding: 1rem;
+    max-width: 650px; 
+    margin: 0 auto;
+
+    &:hover {
+      transform: translateY(-10px);
+    }
+
+    @media (max-width: 768px) {
+      height: 300px; // Increase height for tablets
+    }
+
+    @media (max-width: 480px) {
+      flex-direction: column; // Stack content vertically for mobile
+      height: auto; // Let the height adjust automatically for mobile
+    }
+
+    .projectImage {
+      width: 40%;
+      height: 100%;
+      object-fit: cover;
+      border-right: 1px solid #E2BFD9;
+
       @media (max-width: 768px) {
-        grid-template-columns: 1fr;
+        width: 25%; // Decrease image width for tablets
+      }
+
+      @media (max-width: 480px) {
+        width: 100%; // Full width for mobile
+        height: 300px; // Decrease height for mobile screens
+        border-right: none;
+        border-bottom: 1px solid #E2BFD9;
       }
     }
-  
-    .projectLink {
-      text-decoration: none; // ensure no underline on links
-    }
-  
-    .projectCard {
-      display: flex;
-      background-color: white;
-      border: 1px solid #E2BFD9;
-      border-radius: 10px;
+
+    .projectContent {
+      padding-left: 1.5rem;
+      text-align: left;
+      flex-grow: 1;
       overflow: hidden;
-      box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-      transition: transform 0.3s ease;
-      height: 200px; // increased height
-      padding: 1rem;
-      max-width: 650px; // limited length of each tile
-  
-      &:hover {
-        transform: translateY(-10px);
+
+      @media (max-width: 480px) {
+        padding-left: 0;
+        padding-top: 1rem;
       }
-  
-      .projectImage {
-        width: 40%;
-        height: 100%;
-        object-fit: cover;
-        border-right: 1px solid #E2BFD9;
+
+      h3 {
+        font-size: 1.8rem;
+        color: #674188;
+        margin-bottom: 0.75rem;
+
+        @media (max-width: 768px) {
+          font-size: 1.6rem;
+        }
+
+        @media (max-width: 480px) {
+          font-size: 1.4rem;
+          text-align: left; // Align text to the left for mobile
+        }
       }
-  
+
+      p {
+        font-size: 1rem;
+        color: #2C2C2C;
+
+        @media (max-width: 768px) {
+          font-size: 0.9rem;
+        }
+
+        @media (max-width: 480px) {
+          font-size: 0.8rem;
+          text-align: left; // Align text to the left for mobile
+        }
+      }
+    }
+
+    @media (max-width: 480px) {
+      display: flex;
+      flex-direction: column; // Stack image and heading side by side
+      justify-content: space-between;
+
       .projectContent {
-        padding-left: 1.5rem;
-        text-align: left;
-        flex-grow: 1;
-  
-        h3 {
-          font-size: 1.8rem;
-          color: #674188;
-          margin-bottom: 0.75rem;
-        }
-  
-        p {
-          font-size: 1rem;
-          color: #2C2C2C;
-        }
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start; // Align heading and description to the left
       }
     }
   }
-  
+}

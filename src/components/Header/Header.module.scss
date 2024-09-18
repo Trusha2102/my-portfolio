@@ -7,9 +7,9 @@
     height: 80px; // Adjust height as needed
     display: flex;
     align-items: center; // Center content vertically
-    justify-content: center; // Center content horizontally
+    justify-content: center; // Center content horizontally (updated)
     position: relative; // Ensure positioning context for alignment
-    width: 100vw; // Ensure full viewport width
+    width: 100%; // Set width to 100% to avoid overflow
     overflow-x: hidden; // Hide horizontal overflow
 
     nav {
@@ -22,7 +22,7 @@
             text-decoration: none;
             transition: color 0.3s ease;
             font-family: 'Inconsolata', monospace;
-            font-weight: 400; // Use desired font weight, e.g., 400
+            font-weight: 400; // Use desired font weight
             font-size: 1.2rem; // Increase font size here
 
             &::after {
@@ -41,6 +41,50 @@
             &:hover::after {
                 transform: scaleX(1);
                 transform-origin: bottom left;
+            }
+        }
+    }
+
+    @media screen and (max-width: 1024px) {
+        padding: 1rem 2rem; // Reduce padding on tablets
+        height: 70px;
+
+        nav {
+            gap: 1.5rem;
+
+            a {
+                font-size: 1.1rem; // Slightly smaller font for tablets
+            }
+        }
+    }
+
+    @media screen and (max-width: 768px) {
+        padding: 0.5rem 1rem;
+        height: 60px;
+
+        nav {
+            gap: 1rem;
+            justify-content: center; // Center buttons horizontally for smaller screens
+
+            a {
+                font-size: 1rem; // Reduce font size for smaller screens
+            }
+        }
+    }
+
+    @media screen and (max-width: 480px) {
+        padding: 0.5rem;
+        height: auto; // Allow auto height for better flexibility on very small screens
+        flex-direction: column; // Stack header content vertically
+        align-items: center; // Center the entire header content
+
+        nav {
+            flex-direction: column; // Stack navigation items vertically
+            gap: 1rem;
+            align-items: center; // Center the buttons vertically
+
+            a {
+                font-size: 1rem; // Maintain size but reduce padding
             }
         }
     }

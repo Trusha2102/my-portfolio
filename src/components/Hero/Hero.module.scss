@@ -10,11 +10,11 @@
     text-align: center;
     padding: 0 2rem;
     color: #333;
-    width: 100vw; // Ensure full viewport width
-    overflow-x: hidden; // Hide horizontal overflow
+    width: 100%;
+    overflow-x: hidden;
 
     .content {
-        max-width: 800px;
+        max-width: 800px; // Full width on large screens
 
         h1 {
             font-size: 3rem;
@@ -25,6 +25,55 @@
         p {
             font-size: 1.5rem;
             color: #2C2C2C; // Dark gray for readability
+        }
+    }
+
+    // Responsive Adjustments
+    @media screen and (max-width: 1024px) {
+        height: 50vh; // Increase height for tablets
+        padding: 0 1.5rem;
+
+        .content {
+            max-width: 700px; // Reduce width on medium screens
+            h1 {
+                font-size: 2.5rem; // Slightly smaller heading for tablets
+            }
+
+            p {
+                font-size: 1.3rem; // Adjust paragraph font size
+            }
+        }
+    }
+
+    @media screen and (max-width: 768px) {
+        height: 55vh; // Further increase height for mobile
+        padding: 0 1rem;
+
+        .content {
+            max-width: 90%; // Decrease width for mobile
+            h1 {
+                font-size: 2rem; // Smaller heading for mobile devices
+            }
+
+            p {
+                font-size: 1.2rem; // Adjust paragraph font size for mobile
+            }
+        }
+    }
+
+    @media screen and (max-width: 480px) {
+        height: 60vh; // Allow more height for smaller screens
+        padding: 0 0.5rem;
+
+        .content {
+            max-width: 85%; // Further reduce width for very small screens
+            h1 {
+                font-size: 1.8rem; // Further reduce heading size for very small screens
+            }
+
+            p {
+                font-size: 1rem; // Smaller paragraph font for small screens
+            }
         }
     }
 }
