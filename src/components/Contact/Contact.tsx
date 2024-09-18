@@ -36,7 +36,7 @@ const Contact = () => {
     try {
       const apiUrl =
         (process.env.REACT_APP_API_URL as string) ||
-        "http://localhost:5000/api/send-email";
+        "https://trusha-jadeja-backend.onrender.com/api/send-email";
 
       if (!apiUrl) {
         console.error("API URL is missing. Check your .env file.");
