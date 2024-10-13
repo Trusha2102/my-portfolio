@@ -4,7 +4,7 @@ This is my personal portfolio website, showcasing my skills, projects, and profe
 
 ## 🚀 Live Demo
 
-You can view the live site here: [My Portfolio]((https://github.com/Trusha2102/my-portfolio.git))
+You can view the live site here: [My Portfolio]((https://trusha-jadeja.onrender.com/))
 
 ## 📂 Project Structure
 
@@ -72,44 +72,6 @@ npm run build
 ```
 
 This will create an optimized version of your portfolio in the `build/` folder, ready for deployment.
-
-## 🚀 Deployment on GitHub Pages
-
-1. Install the GitHub Pages package:
-
-   ```bash
-   npm install gh-pages --save-dev
-   ```
-
-2. Update your `package.json` file:
-
-   Add the following scripts:
-
-   ```json
-   "homepage": "https://github.com/Trusha2102/my-portfolio.git",
-   "scripts": {
-     "predeploy": "npm run build",
-     "deploy": "gh-pages -d build"
-   }
-   ```
-
-3. Deploy to GitHub Pages:
-
-   ```bash
-   npm run deploy
-   ```
-
-This command will build the app and publish the `build` folder to the `gh-pages` branch of your repository.
-
-### Updating GitHub Pages
-
-After making changes, simply run:
-
-```bash
-npm run deploy
-```
-
-This will update your live site.
 
 ## 📝 License
 
