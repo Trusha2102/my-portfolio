@@ -10,6 +10,7 @@ import {
   FaEnvelope,
   FaLinkedin,
   FaFileAlt,
+  FaStackOverflow,
 } from "react-icons/fa";
 
 const Contact = () => {
@@ -163,7 +164,15 @@ const Contact = () => {
             <FaLinkedin />
           </a>
           <a
-            href="https://drive.google.com/file/d/1AV2vAwT86cQfVNIBxt3KhpjQcYdhFeDJ/view?usp=sharing"
+            href="https://stackoverflow.com/users/27944924/trusha-jadeja"
+            target="_blank"
+            rel="noopener noreferrer"
+            title="Stack Overflow"
+          >
+            <FaStackOverflow />
+          </a>
+          <a
+            href="https://drive.google.com/file/d/14CbxNQitsERcWyUPH8-T7kSh9AqEYKjr/view?usp=drive_link"
             target="_blank"
             rel="noopener noreferrer"
             title="Resume"
