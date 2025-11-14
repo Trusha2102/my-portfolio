@@ -40,6 +40,20 @@ const ProjectsComponent = () => {
       link: "https://github.com/GovindxSharma/YMs-v2",
     },
     {
+      title: "Salon Booking & Management System",
+      image: "/hair-salon.png",
+      description:
+        "Full salon management system with booking, staff handling, services, billing, analytics, client details, and admin panel — optimized for speed and daily operations.",
+      link: "https://buntysaloon.onrender.com/", // update if you want a specific repo/link
+    },
+    {
+      title: "Customer Compliance Services (CSS)",
+      image: "/compliance.png",
+      description:
+        "Compliance tracking system for clients with license tracking, renewals, notifications, overdue alerts, document management, and a complete admin workflow.",
+      link: "https://customercompliancefe.onrender.com/", // update when final repo is public
+    },
+    {
       title: "My Portfolio",
       image: "/portfolio.png",
       description:

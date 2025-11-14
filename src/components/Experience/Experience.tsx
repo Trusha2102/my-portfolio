@@ -4,7 +4,7 @@ export default function Experience() {
   const experiences = [
     {
       company: "Hex Wireless Pvt. Ltd.",
-      duration: "Nov 2024 - Present",
+      duration: "Nov 2024 - March 2025",
       position: "Software Development Engineer",
       description:
         "I lead development teams, manage project timelines, and ensure the timely delivery of high-quality software solutions. I develop and maintain applications using .NET Core, utilizing Three-Tier Architecture and MVC models to create scalable and maintainable systems. My responsibilities include managing databases with MariaDB via HeidiSQL, integrating Redis and RabbitMQ for efficient data handling and message brokering, and implementing Microsoft Identity for secure authentication and authorization. I actively collaborate with cross-functional teams to design and deploy robust backend solutions, consistently enhancing system performance and reliability.",
