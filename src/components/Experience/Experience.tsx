@@ -3,6 +3,13 @@ import styles from "./Experience.module.scss";
 export default function Experience() {
   const experiences = [
     {
+      company: "Vizon Technolabs",
+      duration: "Oct 2025 - Present",
+      position: "Co-Founder & Technical Director",
+      description:
+        "As Co-Founder & Technical Director, I define the technical vision and lead end-to-end development across multiple projects. I architect and build scalable applications using the MERN stack, ensuring high performance and maintainability. I oversee deployment and infrastructure management on VPS environments, utilizing Nginx for server configuration and PM2 for process management and application monitoring. I lead engineering teams, manage project timelines, and collaborate closely with clients and stakeholders to deliver reliable, production-ready solutions aligned with business goals.",
+    },
+    {
       company: "Hex Wireless Pvt. Ltd.",
       duration: "Nov 2024 - March 2025",
       position: "Software Development Engineer",
