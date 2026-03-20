@@ -172,7 +172,7 @@ const Contact = () => {
             <FaStackOverflow />
           </a>
           <a
-            href="https://drive.google.com/file/d/14CbxNQitsERcWyUPH8-T7kSh9AqEYKjr/view?usp=drive_link"
+            href="https://drive.google.com/file/d/1OAMWQji3RbAlO1977Yb-dzWUkmkHOjfT/view?usp=sharing"
             target="_blank"
             rel="noopener noreferrer"
             title="Resume"
