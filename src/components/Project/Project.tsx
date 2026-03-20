@@ -12,18 +12,25 @@ const ProjectsComponent = () => {
       link: "https://www.hdfclife-international.com/",
     },
     {
-      title: "College Management System",
-      image: "/college.jpg",
+      title: "Customer Compliance Services (CSS)",
+      image: "/ccs.png",
+      description:
+        "Compliance tracking system for clients with license tracking, renewals, notifications, overdue alerts, document management, and a complete admin workflow.",
+      link: "https://customercompliancefe.onrender.com/", // update when final repo is public
+    },
+    {
+      title: "Aarya Foundation",
+      image: "/aryalogo.png",
+      description:
+        "Built a full-stack NGO website enabling donations, event updates, and improved online presence with a scalable backend.",
+      link: "https://aaryagaushala.com",
+    },
+    {
+      title: "R.H. Patel Institute of Technology",
+      image: "/rhpatel.jpg",
       description:
         "Comprehensive management system for student registration, class handling, fees management, and reporting.",
       link: "https://cms-api-admin.surge.sh/#/homePage",
-    },
-    {
-      title: "All 'Bout Pets",
-      image: "/dog.png",
-      description:
-        "Platform for Pet Parents, Pet Sellers, Pet Sitters, and Pet Care Givers with user privacy and dashboard features.",
-      link: "https://allboutpets.onrender.com/",
     },
     {
       title: "Hotel Management System",
@@ -40,18 +47,11 @@ const ProjectsComponent = () => {
       link: "https://github.com/GovindxSharma/YMs-v2",
     },
     {
-      title: "Salon Booking & Management System",
-      image: "/hair-salon.png",
+      title: "All 'Bout Pets",
+      image: "/dog.png",
       description:
-        "Full salon management system with booking, staff handling, services, billing, analytics, client details, and admin panel — optimized for speed and daily operations.",
-      link: "https://buntysaloon.onrender.com/", // update if you want a specific repo/link
-    },
-    {
-      title: "Customer Compliance Services (CSS)",
-      image: "/compliance.png",
-      description:
-        "Compliance tracking system for clients with license tracking, renewals, notifications, overdue alerts, document management, and a complete admin workflow.",
-      link: "https://customercompliancefe.onrender.com/", // update when final repo is public
+        "Platform for Pet Parents, Pet Sellers, Pet Sitters, and Pet Care Givers with user privacy and dashboard features.",
+      link: "https://allboutpets.onrender.com/",
     },
     {
       title: "My Portfolio",
