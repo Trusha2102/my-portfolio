@@ -3,8 +3,7 @@ import styles from "./About.module.scss"; // Adjust path if necessary
 
 const About: React.FC = () => {
   const resumeUrl =
-    "https://drive.google.com/file/d/1Vnt7ZKUz6-WtnIxn3Dlqlp2Qq8VbQSA6/view?usp=sharing"; // Replace with your actual Google Drive URL
-
+    "https://drive.google.com/file/d/1OAMWQji3RbAlO1977Yb-dzWUkmkHOjfT/view?usp=sharing";
   return (
     <section id="about" className={styles.about}>
       <div className={styles.content}>
