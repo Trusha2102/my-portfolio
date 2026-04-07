@@ -1,0 +1,15 @@
+{
+  "$schema": "https://unpkg.com/knip@5/schema.json",
+  "entry": [
+    "src/react-app/main.tsx",
+    "src/worker/index.ts"
+  ],
+  "project": ["src/**/*.{ts,tsx}"],
+  "ignore": [
+    ".bun/**",
+    "dist/**",
+    "worker-configuration.d.ts",
+    "src/react-app/vite-env.d.ts"
+  ],
+  "ignoreDependencies": []
+}

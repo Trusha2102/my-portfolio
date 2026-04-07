@@ -1,0 +1,249 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 340 30% 98%;
+    --foreground: 340 25% 15%;
+    --card: 0 0% 100%;
+    --card-foreground: 340 25% 15%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 340 25% 15%;
+    --primary: 340 70% 65%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 340 40% 95%;
+    --secondary-foreground: 340 25% 25%;
+    --muted: 340 20% 94%;
+    --muted-foreground: 340 15% 45%;
+    --accent: 320 60% 85%;
+    --accent-foreground: 340 25% 20%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 60 9.1% 97.8%;
+    --border: 340 30% 88%;
+    --input: 340 30% 88%;
+    --ring: 340 70% 65%;
+    --radius: 1rem;
+    --chart-1: 340 70% 70%;
+    --chart-2: 320 65% 65%;
+    --chart-3: 300 50% 60%;
+    --chart-4: 280 45% 55%;
+    --chart-5: 260 40% 50%;
+    --sakura-light: 340 80% 90%;
+    --sakura-medium: 340 75% 80%;
+    --sakura-dark: 340 70% 70%;
+    --rose-gold: 15 60% 70%;
+    --lavender: 280 50% 85%;
+    --sidebar: 340 30% 98%;
+    --sidebar-foreground: 340 25% 15%;
+    --sidebar-primary: 340 70% 65%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 340 40% 95%;
+    --sidebar-accent-foreground: 340 25% 25%;
+    --sidebar-border: 340 30% 88%;
+    --sidebar-ring: 340 70% 65%;
+  }
+
+  .dark {
+    --background: 340 20% 8%;
+    --foreground: 340 20% 95%;
+    --card: 340 20% 12%;
+    --card-foreground: 340 20% 95%;
+    --popover: 340 20% 12%;
+    --popover-foreground: 340 20% 95%;
+    --primary: 340 65% 60%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 340 25% 18%;
+    --secondary-foreground: 340 20% 90%;
+    --muted: 340 20% 15%;
+    --muted-foreground: 340 15% 60%;
+    --accent: 320 45% 30%;
+    --accent-foreground: 340 20% 95%;
+    --destructive: 0 72.2% 50.6%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 340 20% 20%;
+    --input: 340 20% 20%;
+    --ring: 340 65% 60%;
+    --chart-1: 340 70% 70%;
+    --chart-2: 320 65% 65%;
+    --chart-3: 300 50% 60%;
+    --chart-4: 280 45% 55%;
+    --chart-5: 260 40% 50%;
+    --sakura-light: 340 50% 25%;
+    --sakura-medium: 340 55% 35%;
+    --sakura-dark: 340 60% 45%;
+    --rose-gold: 15 50% 50%;
+    --lavender: 280 40% 40%;
+    --sidebar: 340 20% 8%;
+    --sidebar-foreground: 340 20% 95%;
+    --sidebar-primary: 340 65% 60%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 340 25% 18%;
+    --sidebar-accent-foreground: 340 20% 90%;
+    --sidebar-border: 340 20% 20%;
+    --sidebar-ring: 340 65% 60%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-family: "Nunito", "Inter Variable", system-ui, sans-serif;
+    /* Hide scrollbar for IE, Edge and Firefox */
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+  button:not([disabled]),
+  [role="button"]:not([disabled]) {
+    cursor: pointer;
+  }
+}
+
+/* Sakura Petal Animation - Combined falling and swaying */
+@keyframes fallAndSway {
+  0% {
+    transform: translateY(0) translateX(0);
+    opacity: 1;
+  }
+  10% {
+    transform: translateY(10vh) translateX(80px) rotate(-15deg);
+    opacity: 1;
+  }
+  25% {
+    transform: translateY(25vh) translateX(-70px) rotate(15deg);
+    opacity: 0.95;
+  }
+  40% {
+    transform: translateY(40vh) translateX(90px) rotate(-12deg);
+    opacity: 0.9;
+  }
+  50% {
+    transform: translateY(50vh) translateX(-60px) rotate(12deg);
+    opacity: 0.85;
+  }
+  60% {
+    transform: translateY(60vh) translateX(70px) rotate(-10deg);
+    opacity: 0.8;
+  }
+  75% {
+    transform: translateY(75vh) translateX(-50px) rotate(10deg);
+    opacity: 0.7;
+  }
+  90% {
+    transform: translateY(90vh) translateX(40px) rotate(-8deg);
+    opacity: 0.3;
+  }
+  100% {
+    transform: translateY(110vh) translateX(0);
+    opacity: 0;
+  }
+}
+
+@keyframes flutter {
+  0% {
+    transform: scale(1) rotate(0deg);
+  }
+  25% {
+    transform: scale(1.05) rotate(5deg);
+  }
+  50% {
+    transform: scale(1) rotate(0deg);
+  }
+  75% {
+    transform: scale(1.05) rotate(-5deg);
+  }
+  100% {
+    transform: scale(1) rotate(0deg);
+  }
+}
+
+@keyframes wing-left {
+  0%, 100% {
+    transform: rotateY(0deg) scale(1, 1);
+  }
+  50% {
+    transform: rotateY(50deg) scale(0.8, 1);
+  }
+}
+
+@keyframes wing-right {
+  0%, 100% {
+    transform: rotateY(0deg) scale(1, 1);
+  }
+  50% {
+    transform: rotateY(-50deg) scale(0.8, 1);
+  }
+}
+
+@keyframes butterfly-fly {
+  0% {
+    transform: translateY(0) translateX(0) scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: translateY(-50vh) translateX(-30px) scale(1.1);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-120vh) translateX(-50px) scale(0.8);
+    opacity: 0;
+  }
+}
+
+@keyframes butterfly-wing-flap {
+  0%, 100% {
+    transform: rotateY(0deg);
+  }
+  25% {
+    transform: rotateY(80deg);
+  }
+  50% {
+    transform: rotateY(0deg);
+  }
+  75% {
+    transform: rotateY(-80deg);
+  }
+}
+
+.sakura-petal {
+  position: fixed;
+  pointer-events: none;
+  z-index: 0;
+  will-change: transform, opacity;
+  animation: fallAndSway linear forwards;
+}
+
+.butterfly-btn {
+  animation: flutter 2s ease-in-out infinite;
+}
+
+.butterfly-btn:hover .wing-left {
+  animation: wing-left 0.3s ease-in-out infinite;
+}
+
+.butterfly-btn:hover .wing-right {
+  animation: wing-right 0.3s ease-in-out infinite;
+}
+
+.butterfly-flying {
+  animation: butterfly-fly 1.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards !important;
+  pointer-events: none;
+}
+
+.butterfly-flying .wing-left {
+  animation: butterfly-wing-flap 0.35s ease-in-out infinite !important;
+}
+
+.butterfly-flying .wing-right {
+  animation: butterfly-wing-flap 0.35s ease-in-out infinite !important;
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+::-webkit-scrollbar {
+  display: none;
+}
