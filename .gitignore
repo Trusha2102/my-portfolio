@@ -2,4 +2,7 @@ dist/
 node_modules/
 .wrangler/
 .dev.vars
-worker-configuration.d.ts
+# worker-configuration.d.ts
+.env
+.next/
+out/
