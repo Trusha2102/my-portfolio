@@ -4,7 +4,7 @@ This is my personal portfolio website, showcasing my skills, projects, and profe
 
 ## 🚀 Live Demo
 
-You can view the live site here: https://trusha-jadeja.onrender.com/
+You can view the live site here: https://trushajadeja.onrender.com/
 
 ## 📂 Project Structure
 
