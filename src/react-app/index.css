@@ -247,3 +247,114 @@
 ::-webkit-scrollbar {
   display: none;
 }
+
+/* Doodle Animations */
+@keyframes doodleFloat {
+  0%, 100% {
+    transform: translateY(0) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-8px) rotate(3deg);
+  }
+}
+
+@keyframes doodleWiggle {
+  0%, 100% {
+    transform: rotate(-2deg);
+  }
+  50% {
+    transform: rotate(2deg);
+  }
+}
+
+@keyframes floatSlow {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-12px);
+  }
+}
+
+.doodle-float {
+  animation: doodleFloat 4s ease-in-out infinite;
+}
+
+.doodle-wiggle {
+  animation: doodleWiggle 2.5s ease-in-out infinite;
+}
+
+.float-slow {
+  animation: floatSlow 6s ease-in-out infinite;
+}
+
+/* Developer Grid Canvas Background */
+.bg-grid {
+  background-size: 40px 40px;
+  background-image: 
+    linear-gradient(to right, rgba(42, 27, 40, 0.04) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(42, 27, 40, 0.04) 1px, transparent 1px);
+}
+
+/* Nachotopia retro-doodle styles */
+.nachotopia-border {
+  border: 2px solid rgba(42, 27, 40, 0.9);
+}
+
+.nachotopia-card {
+  background: #ffffff;
+  border: 2px solid rgba(42, 27, 40, 0.9);
+  border-radius: 24px;
+  box-shadow: 4px 4px 0px 0px rgba(42, 27, 40, 0.9);
+  transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.nachotopia-card:hover {
+  transform: translate(-2px, -2px);
+  box-shadow: 6px 6px 0px 0px rgba(42, 27, 40, 0.9);
+}
+
+.nachotopia-btn {
+  background: #ffffff;
+  border: 2px solid rgba(42, 27, 40, 0.9);
+  border-radius: 9999px;
+  box-shadow: 3px 3px 0px 0px rgba(42, 27, 40, 0.9);
+  transition: all 0.15s ease-in-out;
+  cursor: pointer;
+}
+
+.nachotopia-btn:hover {
+  transform: translate(1px, 1px);
+  box-shadow: 2px 2px 0px 0px rgba(42, 27, 40, 0.9);
+}
+
+.nachotopia-btn:active {
+  transform: translate(3px, 3px);
+  box-shadow: 0px 0px 0px 0px rgba(42, 27, 40, 0.9);
+}
+
+.bg-peach {
+  background-color: #FFEAD2;
+}
+
+.bg-lilac {
+  background-color: #E2E4FF;
+}
+
+.bg-pink-soft {
+  background-color: #FFD6E8;
+}
+
+.bg-mint {
+  background-color: #E2F5E9;
+}
+
+.bg-yellow-soft {
+  background-color: #FFFCE8;
+}
+
+.bg-light-blue {
+  background-color: #F4F5FC;
+}
+
+

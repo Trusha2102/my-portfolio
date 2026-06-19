@@ -9,8 +9,9 @@ export default defineConfig({
 	    cloudflare(),
 	  ],
 	  server: {
-	    allowedHosts: true,
-	  },
+    allowedHosts: true,
+    port: 3000,
+  },
   build: {
     chunkSizeWarningLimit: 5000,
   },

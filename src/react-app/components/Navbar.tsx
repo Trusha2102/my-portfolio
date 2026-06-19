@@ -8,6 +8,7 @@ const navItems = [
   { label: "Education", href: "#education" },
   { label: "Projects", href: "#projects" },
   { label: "Skills", href: "#skills" },
+  { label: "FAQ", href: "#faq" },
   { label: "Contact", href: "#contact" },
 ];
 
@@ -18,7 +19,7 @@ export function Navbar() {
 
   useEffect(() => {
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 50);
+      setIsScrolled(window.scrollY > 40);
     };
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
@@ -51,34 +52,43 @@ export function Navbar() {
   return (
     <nav
       ref={navRef}
-      className={`fixed top-0 left-0 right-0 z-40 transition-all duration-500 ${
+      className={`fixed left-0 right-0 z-40 transition-all duration-300 ${
         isScrolled
-          ? "bg-white/80 backdrop-blur-lg shadow-lg shadow-sakura-medium/20"
-          : "bg-transparent"
+          ? "top-4 px-4"
+          : "top-0 px-0"
       }`}
     >
-      <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-16">
+      <div
+        className={`mx-auto transition-all duration-300 ${
+          isScrolled
+            ? "max-w-4xl bg-white border-3 border-[#2A1B28] rounded-full shadow-[4px_4px_0px_0px_#2A1B28] px-6 py-2"
+            : "max-w-6xl bg-transparent px-4 sm:px-6 lg:px-8 py-4"
+        }`}
+      >
+        <div className="flex justify-between items-center h-12">
+          
+          {/* Logo */}
           <a
             href="#home"
             onClick={(e) => {
               e.preventDefault();
               handleNavClick("#home");
             }}
-            className="text-xl font-bold text-primary hover:text-primary/80 transition-colors"
-            style={{ fontFamily: "'Playfair Display', serif" }}
+            className="text-2xl font-black text-[#2A1B28] hover:text-primary transition-colors flex items-center gap-1.5"
+            style={{ fontFamily: "'Fredoka', sans-serif" }}
           >
-            TJ
+            <span>Trusha</span>
+            <span className="text-pink-400">✿</span>
           </a>
 
-          {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center gap-1">
+          {/* Desktop Nav Items */}
+          <div className="hidden md:flex items-center gap-1.5">
             {navItems.map((item) => (
               <button
                 key={item.href}
                 onClick={() => handleNavClick(item.href)}
-                className="px-4 py-2 text-sm font-medium text-foreground/80 hover:text-primary hover:bg-sakura-light/50 rounded-full transition-all duration-300"
-                style={{ fontFamily: "'Nunito', sans-serif" }}
+                className="px-4 py-1.5 text-sm font-bold text-[#2A1B28] hover:bg-pink-soft hover:border-2 hover:border-[#2A1B28] hover:translate-x-[1px] hover:translate-y-[1px] hover:shadow-[1px_1px_0px_0px_#2A1B28] border-2 border-transparent rounded-full transition-all"
+                style={{ fontFamily: "'Fredoka', sans-serif" }}
               >
                 {item.label}
               </button>
@@ -88,21 +98,21 @@ export function Navbar() {
           {/* Mobile Menu Button */}
           <button
             onClick={() => setIsMenuOpen(!isMenuOpen)}
-            className="md:hidden p-2 text-foreground hover:text-primary transition-colors"
+            className="md:hidden p-2 text-[#2A1B28] hover:text-primary transition-colors focus:outline-none"
           >
             {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
           </button>
         </div>
 
-        {/* Mobile Navigation */}
+        {/* Mobile Nav Menu */}
         {isMenuOpen && (
-          <div className="md:hidden bg-white/95 backdrop-blur-lg rounded-2xl shadow-xl shadow-sakura-medium/30 mb-4 overflow-hidden">
+          <div className="md:hidden mt-3 bg-white border-3 border-[#2A1B28] rounded-2xl shadow-[4px_4px_0px_0px_#2A1B28] overflow-hidden p-2 flex flex-col gap-1">
             {navItems.map((item) => (
               <button
                 key={item.href}
                 onClick={() => handleNavClick(item.href)}
-                className="w-full px-6 py-4 text-center text-foreground hover:text-primary hover:bg-sakura-light/50 transition-all duration-300 border-b border-sakura-light/50 last:border-b-0"
-                style={{ fontFamily: "'Nunito', sans-serif" }}
+                className="w-full py-3 text-center text-sm font-bold text-[#2A1B28] hover:bg-pink-soft rounded-xl transition-all"
+                style={{ fontFamily: "'Fredoka', sans-serif" }}
               >
                 {item.label}
               </button>
