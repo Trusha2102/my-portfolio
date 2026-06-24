@@ -10,6 +10,7 @@ import { ProjectsSection } from "../components/ProjectsSection";
 import { ContactSection } from "../components/ContactSection";
 import { FaqSection } from "../components/FaqSection";
 import { Navbar } from "../components/Navbar";
+import { CookieConsent } from "../components/CookieConsent";
 
 export default function Home() {
   useEffect(() => {
@@ -51,6 +52,7 @@ export default function Home() {
         </footer>
       </div>
       <ButterflyButton />
+      <CookieConsent />
     </div>
   );
 }

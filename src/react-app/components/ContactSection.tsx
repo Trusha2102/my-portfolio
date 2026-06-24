@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { useNavigate } from "react-router";
 import { portfolioData } from "@/data/portfolio";
 import { Github, Linkedin, Instagram, FileText, Send, Play, Terminal, Check } from "lucide-react";
 import { MailDoodle, SparkleDoodle, HeartDoodle } from "./Doodles";
@@ -25,6 +26,23 @@ const socialLinks = [
 ];
 
 export function ContactSection() {
+  const navigate = useNavigate();
+  const [, setFlowerClicks] = useState(0);
+
+
+  const handleFlowerClick = () => {
+    setFlowerClicks((prev) => {
+      const next = prev + 1;
+      if (next >= 5) {
+        navigate("/admin");
+        return 0;
+      }
+      return next;
+    });
+  };
+
+
+
   const [activeTab, setActiveTab] = useState<"ts" | "json">("ts");
   const [runState, setRunState] = useState<"idle" | "compiling" | "done">("idle");
   const [consoleLogs, setConsoleLogs] = useState<string[]>([]);
@@ -71,7 +89,7 @@ export function ContactSection() {
             style={{ fontFamily: "'Fredoka', sans-serif" }}
           >
             Get In Touch
-            <span className="text-pink-400 ml-1">✿</span>
+            <span className="text-pink-400 ml-1 cursor-pointer select-none" onClick={handleFlowerClick}>✿</span>
             <MailDoodle className="absolute -top-10 -right-12 w-8 h-8 text-primary/50 doodle-wiggle hidden sm:block" />
           </h2>
           <div className="flex justify-center gap-1.5 mb-6">
